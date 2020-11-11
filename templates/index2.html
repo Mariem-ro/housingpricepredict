@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+      
+        <!-- jQuery library -->
+        <script src= 
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+        </script> 
+      
+        <!-- Popper JS -->
+        <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> 
+        </script> 
+      
+        <!-- Latest compiled JavaScript -->
+        <script src= 
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"> 
+        </script> 
+      
+        <meta name="viewport" content= 
+            "width=device-width, initial-scale=1"> 
+      
+        <link rel="stylesheet" type="text/css" 
+            href="style.css"> 
+      
+        <link href= 
+    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"> 
+      
+        <link href= 
+    "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+                rel="stylesheet"> 
+        <script src= 
+    "https://cdn.jsdelivr.net/npm/gijgo@1.8.1/combined/js/gijgo.min.js" 
+            type="text/javascript"> 
+        </script> 
+          
+        <link href= 
+    "https://cdn.jsdelivr.net/npm/gijgo@1.8.1/combined/css/gijgo.min.js"
+            rel="stylesheet" type="text/css"> 
+          
+        <link rel="stylesheet" type="text/css" 
+                href="css/lightbox.min.css"> 
+      
+        <script type="text/javascript" src= 
+            "js/lightbox-plus-jquery.min.js"> 
+        </script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welecom Predict you house price</title>
+    <link href="static/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="warpper fl">
+        <div class="main">
+            <div class="head">
+<p>Enter your house Details</p>
+</div>
+<div class="form fl">
+                <form action="{{url_for('home')}}", method="POST">
+                    <p class="name">
+Longitude :</p>
+<p>
+<input type="text" name="Longitude" id="Longitude" placeholder="Longitude" class="Longitude"></p>
+<p class="name">
+Total bedrooms :</p>
+<p>
+<input type="text" name="Total bedrooms" id="Total bedrooms" placeholder="Total bedrooms" class="Total"></P>
+                    <p class="name">
+Latitude :</p>
+<p>
+<input type="text" name="Latitude" id="Latitude" placeholder="Latitude" class="Latitude"></p>
+<p class="name">
+Population :</P>
+                    <p>
+<input type="text" name="Population" id="Population" placeholder="Population" class="Population"></p>
+<p class="name">
+    Housing median age:</p>
+    <p>
+    <input type="text" name="Housing median age" id="Housing median age" placeholder="Housing median age" class="Housing median age"></p>
+    <p class="name">
+        Householders :</p>
+        <p>
+        <input type="text" name="Householders" id="Householders" placeholder="Householders" class="Householders"></p>
+
+        <p class="name">
+            Totals rooms :</p>
+            <p>
+            <input type="text" id="Totals rooms" name="Totals rooms" placeholder="Totals rooms" class="Totals"></p>
+            <p class="name">
+                Median income :</p>
+                <p>
+                <input type="text" id="Median income" name="Median income" placeholder="Median income" class="income"></p>
+                <div class="toggle"> 
+                    <button type="button" 
+                        class="btn btn-warning" 
+                        data-toggle="button" 
+                        autocomplete="off"> 
+                        Ocean Proximity
+                    </button> 
+                </div> 
+              
+                <div class="radio"> 
+                    <div class="btn-group btn-group-toggle" 
+                        data-toggle="buttons"> 
+                        <label class="btn btn-primary"> 
+                            <input type="radio" name="toggle_option" id="button1" autocomplete="off" value="1H OCEAN"> 1H OCEAN
+                        </label> 
+              
+                        <label class="btn btn-primary active"> 
+                            <input type="radio" name="toggle_option" id="button2" autocomplete="off" value="INLAND">  
+                                INLAND
+                        </label> 
+              
+                        <label class="btn btn-primary"> 
+                            <input type="radio" name="toggle_option" id="button3" autocomplete="off" value="NEAR OCEAN">  
+                                NEAR_OCEAN 
+                        </label> 
+              
+                        <label class="btn btn-primary"> 
+                            <input type="radio" name="toggle_option" id="button4" autocomplete="off" value="NEAR BAY"> 
+                                NEAR BAY
+                        </label> 
+              
+                        <label class="btn btn-primary"> 
+                            <input type="radio" name="toggle_option" id="button5" autocomplete="off" value="ISLAND">  
+                                ISLAND 
+                        </label> 
+                    </div> 
+                </div> 
+                <input type="submit" name="sb" value="Predict" class="sub"></p>
+                <img src="static/im.png" style="overflow:hidden; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; margin-bottom:30px; margin-top: -1460px; margin-bottom: 0px; margin-left: 775px; width: 150px; height:150px;">
+                <img src="static/imagg.png" style="overflow:hidden; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; margin-bottom:30px; margin-top: -1150px; margin-left: 775px; width: 150px; height:150px;">
+                <p style='margin-top: -300px; margin-left: 750px; width: 200px; height:100px;border-style: double; background-color:rgb(149, 130, 76); color:rgb(255, 255, 255)'><em><strong> {{ prediction_text }} </strong></em></p>     
+              </form>             
+</div>
+</div>
+</div>
+</body>
+</html>
