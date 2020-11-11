@@ -6,6 +6,6 @@ just copie this link in the url.
 do not open it by just clicking on the link below.
 
 
-https://git.heroku.com/predictpricehouse.git 
+https://predictpricehouse.herokuapp.com/
 
 ![t](https://user-images.githubusercontent.com/66451325/98868270-26279f00-2470-11eb-97d2-a8470db28bf5.jpg)
