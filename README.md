@@ -1,6 +1,6 @@
 # housingpricepredict
-small application for predecting house price.
-languages : jupyter Notebook,python, Flask, css, html, bootstrap.
+small application for predicting house price.
+langages : python(jupyter Notebook), Flask, css, html, bootstrap.
 we did push this app To Heroku For Web hosting.
 click on the link below.
 
